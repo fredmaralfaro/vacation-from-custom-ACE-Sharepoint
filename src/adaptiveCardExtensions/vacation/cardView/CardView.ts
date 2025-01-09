@@ -5,7 +5,7 @@ import {
   IExternalLinkCardAction,
   IQuickViewCardAction
 } from '@microsoft/sp-adaptive-card-extension-base';
-import * as strings from 'VacationAdaptiveCardExtensionStrings';
+// import * as strings from 'VacationAdaptiveCardExtensionStrings';
 import {
   IVacationAdaptiveCardExtensionProps,
   IVacationAdaptiveCardExtensionState,
@@ -25,11 +25,11 @@ export class CardView extends BaseComponentsCardView<
       },
       header: {
         componentName: 'text',
-        text: strings.PrimaryText
+        text: "Vacaciones disponibles: 10"    
       },
       footer: {
         componentName: 'cardButton',
-        title: strings.QuickViewButton,
+        title: "Ver Detalles",
         action: {
           type: 'QuickView',
           parameters: {
@@ -42,9 +42,9 @@ export class CardView extends BaseComponentsCardView<
 
   public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
     return {
-      type: 'ExternalLink',
+      type: 'QuickView',
       parameters: {
-        target: 'https://www.bing.com'
+        view: QUICK_VIEW_REGISTRY_ID
       }
     };
   }

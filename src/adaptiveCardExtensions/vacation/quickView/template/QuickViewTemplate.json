@@ -1,28 +1,100 @@
 {
-  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
   "version": "1.5",
-  "body": [
-    {
-      "type": "TextBlock",
-      "weight": "Bolder",
-      "text": "${title}"
-    },
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "type": "Column",
-          "items": [
+  "body": [   
+      {
+        "type": "ColumnSet",
+        "columns": [
             {
-              "type": "TextBlock",
-              "weight": "Bolder",
-              "text": "${subTitle}",
-              "wrap": true
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": ":Saldo de Vacaciones",
+                        "spacing": "none"
+
+                    }
+                ],
+                "width": "145px",
+                "rtl": true,
+                "verticalContentAlignment": "Top"
+            },
+            {
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "${SaldoVacaciones}",
+                        "spacing": "none",
+                        "weight": "Lighter"
+                    }
+                ],
+                "width": "auto"
             }
-          ]
-        }
-      ]
-    }
-  ]
+        ]
+      },
+      {
+        "type": "ColumnSet",
+        "columns": [
+            {
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": ":Días laborados",
+                        "spacing": "none"
+                    }
+                ],
+                "width": "145px",
+                "rtl": true,
+                "verticalContentAlignment": "Top"
+            },
+            {
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "${Antiguedad}",
+                        "spacing": "none",
+                        "weight": "Lighter"
+                    }
+                ],
+                "width": "auto"
+            }
+        ]
+      },
+      {
+        "type": "ColumnSet",
+        "columns": [
+            {
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": ":Inicio de ciclo",
+                        "spacing": "none"
+                        
+                    }
+                ],
+                "width": "145px",
+                "rtl": true,
+                "verticalContentAlignment": "Top"
+            },
+            {
+                "type": "Column",
+                "items": [
+                    {
+                        "type": "TextBlock",
+                        "text": "${FechaIngreso}",
+                        "spacing": "none",
+                        "wrap": true,
+                        "weight": "Lighter"
+                    }
+                ],
+                "width": "auto"
+            }
+        ]
+      }
+    ]
 }

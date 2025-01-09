@@ -8,6 +8,10 @@ import {
 export interface IQuickViewData {
   subTitle: string;
   title: string;
+  FechaIngreso: string;
+  Antiguedad: string;
+  SaldoVacaciones: string;
+  Email: string;
 }
 
 export class QuickView extends BaseAdaptiveCardQuickView<
@@ -18,7 +22,11 @@ export class QuickView extends BaseAdaptiveCardQuickView<
   public get data(): IQuickViewData {
     return {
       subTitle: strings.SubTitle,
-      title: strings.Title
+      title: strings.Title,
+      FechaIngreso: "this.state.IniDate",
+      Antiguedad: "this.state.YearsOfService",
+      SaldoVacaciones: "this.state.VacationsQty",
+      Email: "this.state.Email"
     };
   }
 
